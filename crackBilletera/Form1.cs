@@ -154,8 +154,7 @@ namespace crackBilletera
         {
             using (NewWebClient wc = new NewWebClient(cookieContainer))
             {
-                wc.Headers["REMOTE_ADDR"] = ip;
-                wc.Headers["X_FORWARDED_FOR"] = ip;
+                wc.Headers["X-Forwarded-For"] = ip;
                 wc.Headers["User-agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36";
                 wc.Headers["Referer"] = "https://billeteramovil.grupopromerica.com";
 
@@ -194,7 +193,7 @@ namespace crackBilletera
             using(NewWebClient wc = new NewWebClient(cookieContainer))
             {
                 wc.Headers["REMOTE_ADDR"] = ip;
-                wc.Headers["X_FORWARDED_FOR"] = ip;
+                wc.Headers["X-Forwarded-For"] = ip;
                 wc.Headers["Referer"] = "https://billeteramovil.grupopromerica.com";
                 wc.Headers["User-agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36";
                 wc.Headers[HttpRequestHeader.ContentType] = "application/x-www-form-urlencoded";
