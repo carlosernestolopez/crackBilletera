@@ -127,7 +127,7 @@ namespace crackBilletera
                         lblAvance.Text = counter + " / " + total;
                     }));
 
-                    while (procesosIniciados == 10)
+                    while (procesosIniciados == 50)
                         Thread.Sleep(1000);
                     
                     string pin = new String('0', digitos - i.ToString().Length) + i.ToString();
