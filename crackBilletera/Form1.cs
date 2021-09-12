@@ -86,14 +86,13 @@ namespace crackBilletera
                 return;
             }
 
-            if( txtNumeroBilletera.Text.Length != 8 || 
-                txtNumeroBilletera.Text.Substring(0, 1) != "8")
+            if( txtNumeroBilletera.Text.Length != 8)
             {
                 MessageBox.Show("El número de billetera es inválido");
                 return;
             }
 
-            if( comboDigitos.Text != "4" && comboDigitos.Text != "6" )
+            if( digitos < 4 || digitos > 8 )
             {
                 MessageBox.Show( "La cantidad de digitos es inválida" );
                 return;
